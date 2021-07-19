@@ -96,9 +96,19 @@
                 </pre>
             </div>
             <div class="col-lg-4">
-                <p>The Code is structured in one function.</p>
-                <h5>Hello World</h5>
-                <p>Hello World is a function that displays an alert with a message of "Hello World"</p>
+                <p>The code shown contains all of the Javascript used in this project. Most of the Javascript is contained inside of an external script, <b>site.js</b>. One line of Javascript runs inline inside of <b>app.html</b>. A few key pieces of it are explained below.</p>
+                <h5>getValue</h5>
+                <p><b>getValue</b> is a function that is triggered when the "Reverse Me" button is clicked on the app webpage. (See the bottom of the Javascript.)
+                    It first makes the "alert" element invisible to the user, (which it will then make visible later once the string has been reversed.)
+                    <br>It then declares <b>userString</b> equal to the value of whatever the user input is into the input area on <b>app.html</b>.
+                    <br>It then passes <b>userString</b> into a new declared <b>revString</b> which will be passed to <b>displayString</b> and also our next function.</p>
+                <h5>reverseString</h5>
+                <p><b>reverseString</b> declares the variable called <b>revString</b> equal to an empty string.
+                <br>Then, a <b>for loop</b> is created which uses the information from the user input given to us by the variable <b>userString</b>. It firsts calculates the length of <b>userString</b> and subtracts 1 from that integer. We subtract 1 so that we can get the integer of the last index of the string the user inputted.
+                <br>The <b>for loop</b> loops and decrements by 1 through the string as long as it gets an index greater than or equal to 0. Each time it loops, it concatenates the character of the index to the revString. When it gets to an index that below 0, the loop ends and the variable <b>revString</b> is returned.</p>
+                <h5>displayString</h5>
+                <p><b>displayString</b> takes the information from <b>revString</b> and uses it in a template literal to write a message to the element using the "msg" id.
+                <br>It then removes the "invisible" class from the element with the "alert" id. The reversed string is now shown!</p>
             </div>
         </div>
     </div>
